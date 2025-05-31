@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chúc mừng sinh nhật!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <input type="text" id="nameInput" placeholder="Nhập tên bạn...">
+    <button onclick="showWish()">Nhận lời chúc</button>
+    <h2 id="wish"></h2>
+    <button onclick="toggleMusic()">🔊 Nhạc nền</button>
+  </div>
+
+  <!-- Pháo hoa -->
+  <canvas id="fireworks"></canvas>
+
+  <!-- Nhạc nền -->
+  <audio id="birthdaySong" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

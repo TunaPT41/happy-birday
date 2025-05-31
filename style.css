@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  text-align: center;
+  color: #333;
+}
+.container {
+  margin-top: 100px;
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  width: 200px;
+}
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4081;
+  color: white;
+  cursor: pointer;
+}
+canvas#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
