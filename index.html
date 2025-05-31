@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chúc mừng sinh nhật!</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday ABCXYZ</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🎉 Happy Birthday! 🎂</h1>
-    <input type="text" id="nameInput" placeholder="Nhập tên bạn...">
-    <button onclick="showWish()">Nhận lời chúc</button>
-    <h2 id="wish"></h2>
-    <button onclick="toggleMusic()">🔊 Nhạc nền</button>
+  <h1>🎉 Chúc mừng sinh nhật ABCXYZ 🎉</h1>
+  <div class="image-container">
+    <img src="your-photo.jpg" alt="Birthday Image" class="rotating" />
   </div>
-
-  <!-- Pháo hoa -->
-  <canvas id="fireworks"></canvas>
-
-  <!-- Nhạc nền -->
-  <audio id="birthdaySong" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  <audio autoplay loop>
+    <source src="birthday-music.mp3" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ phát nhạc.
   </audio>
-
   <script src="script.js"></script>
 </body>
 </html>
+
