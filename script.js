@@ -1,46 +1,47 @@
-function showWish() {
-  const name = document.getElementById("nameInput").value.trim();
-  const wishEl = document.getElementById("wish");
-
-  if (name) {
-    wishEl.textContent = `🎉 Chúc mừng sinh nhật ${name}! Chúc bạn thật nhiều niềm vui và hạnh phúc! 🎂`;
-    triggerFireworks();
-  } else {
-    wishEl.textContent = "Vui lòng nhập tên!";
-  }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-
-function toggleMusic() {
-  const music = document.getElementById("birthdaySong");
-  if (music.paused) {
-    music.play();
-  } else {
-    music.pause();
-  }
+h1 {
+  margin-top: 30px;
+  color: #ff4081;
+  animation: fadeIn 2s ease-in-out;
 }
-
-// 🎆 Hiệu ứng pháo hoa đơn giản
-function triggerFireworks() {
-  const canvas = document.getElementById('fireworks');
-  const ctx = canvas.getContext('2d');
-
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  for (let i = 0; i < 50; i++) {
-    const x = Math.random() * canvas.width;
-    const y = Math.random() * canvas.height / 2;
-    const radius = Math.random() * 2 + 1;
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${r},${g},${b},0.8)`;
-    ctx.fill();
+.image-container {
+  margin-top: 20px;
+}
+.rotating {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  animation: rotate 8s linear infinite;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+  animation: rise 5s linear forwards;
+  opacity: 0.7;
+}
+@keyframes rise {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
   }
-
-  setTimeout(() => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }, 1000);
 }
